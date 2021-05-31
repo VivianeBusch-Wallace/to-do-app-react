@@ -20,11 +20,23 @@ function App() {
     setList(newToDoList);
   };
 
+  // function to mark the todo as finished >>
+  const statusChecked = (itemToCheck) => {
+    // << itemToCheck receives the id for that specific item from ToDoList.js
+    setList((items) => {
+      // this returns the item which matches the id of the checked/unchecked item and toggles the checked Status >>
+      return items.filter((item) => {
+        if (item.id === itemToCheck) item.done = !item.done;
+        return item;
+      });
+    });
+  };
+
   return (
     <div className="App">
       <Header />
-      <HandleInput />
-      <ToDoList />
+      <HandleInput setList={setList} />
+      <ToDoList list={list} remove={remove} statusChecked={statusChecked} />
       <Footer />
     </div>
   );
