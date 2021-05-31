@@ -6,3 +6,5 @@ function HandleInput() {
     </form>
   );
 }
+
+export default HandleInput;
