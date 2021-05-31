@@ -1,4 +1,7 @@
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(#e66465, #9198e5);
@@ -7,6 +10,7 @@ body {
   align-items: center;
 }
 
+// style of the App
 .App {
   border: aqua 1rem solid;
   border-radius: 10%;
