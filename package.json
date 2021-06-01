@@ -2,7 +2,7 @@
   "name": "to-do-app-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/VivianeBusch-Wallace/to-do-app-react",
+  "homepage": "https://VivianeBusch-Wallace.github.io/to-do-app-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
