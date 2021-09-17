@@ -17,6 +17,7 @@ function HandleInput(props) {
   function addToList(e) {
     // prevent default of form >>
     e.preventDefault();
+
     //make sure the input is not processed when it's empty with an if condition >>
     if (userInput.length) {
       // create item list and to ensure we don't replace the old listitem with the new>>

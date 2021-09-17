@@ -14,8 +14,10 @@ function App() {
   // function to remove a listitem on click of trashcan (see function call in ToDoList.js) >>
   const remove = (itemToRemove) => {
     // << itemToRemove is the id of the clicked list item
+
     // all items that do not match this id will be put into a new array which will replace the old list >>
     const newToDoList = list.filter((item) => item.id !== itemToRemove);
+
     // setList now receives the new array >>
     setList(newToDoList);
   };
@@ -23,6 +25,7 @@ function App() {
   // function to mark the todo as finished >>
   const statusChecked = (itemToCheck) => {
     // << itemToCheck receives the id for that specific item from ToDoList.js
+
     setList((items) => {
       // this returns the item which matches the id of the checked/unchecked item and toggles the checked Status >>
       return items.filter((item) => {
