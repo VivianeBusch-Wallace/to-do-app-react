@@ -26,6 +26,7 @@ function HandleInput(props) {
         { id: uuidv4(), title: userInput.trim(), done: false, priority: 0 },
       ]);
     }
+
     // clear userInput on submit
     setUserInput("");
   }

@@ -9,7 +9,9 @@ const ToDoList = (props) => {
         onChange={() => props.check(toDo.id)}
       />
       {toDo.title}
-      <span> | priority: {toDo.priority} |</span>
+      <span onClick={() => props.increasePrio(toDo.id)}>
+        | priority: {toDo.priority} |
+      </span>
       {/* remove the listitem on click of icon >> */}
       <i
         onClick={() => {

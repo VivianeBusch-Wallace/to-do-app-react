@@ -11,6 +11,19 @@ function App() {
   // useState for the list of todos >>
   const [list, setList] = useState([]);
 
+  const increasePriority = (id) => {
+    const toDo = list.find((toDo) => toDo.id === id);
+    let target = toDo.priority < 5 ? toDo.priority++ : (toDo.priority = 0);
+    let index = list.findIndex((item) => item.id === id);
+
+    let filteredList = list.filter((toDo) => toDo.id != id);
+
+    let newList = list.splice(index, 1);
+
+    console.log(newList);
+    setList([...newList, ...filteredList]);
+  };
+
   // function to remove a listitem on click of trashcan (see function call in ToDoList.js) >>
   const remove = (itemToRemove) => {
     // << itemToRemove is the id of the clicked list item
@@ -39,7 +52,12 @@ function App() {
     <div className="App">
       <Header />
       <HandleInput setList={setList} />
-      <ToDoList list={list} remove={remove} statusChecked={statusChecked} />
+      <ToDoList
+        list={list}
+        remove={remove}
+        statusChecked={statusChecked}
+        increasePrio={increasePriority}
+      />
       <Footer />
     </div>
   );
