@@ -19,7 +19,7 @@ function HandleInput(props) {
     e.preventDefault();
 
     //make sure the input is not processed when it's empty with an if condition >>
-    if (userInput.length) {
+    if (userInput.trim()) {
       // create item list and to ensure we don't replace the old listitem with the new>>
       props.setList((prevState) => [
         ...prevState,
